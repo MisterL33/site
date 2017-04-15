@@ -1,0 +1,14 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+    
+platform_accueil:
+    path:      /accueil
+    defaults:  { _controller: AppBundle:Default:index }    
+
+
+platform_decouvrir:
+    path:      /decouvrir
+    defaults:  { _controller: AppBundle:Default:decouvrir }
+    
+    
