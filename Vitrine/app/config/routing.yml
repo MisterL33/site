@@ -1,0 +1,32 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+    
+platform_accueil:
+    path:      /accueil
+    defaults:  { _controller: AppBundle:Default:index }    
+
+
+platform_decouvrir:
+    path:      /decouvrir
+    defaults:  { _controller: AppBundle:Default:decouvrir }
+
+    
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"    
+
+
+
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/"
+    type:     annotation
+    prefix:   /admin    
+    
+    
+tuto_starratingsystem:
+    path:     /starratingsystem
+    defaults: { _controller: AppBundle:Starratingsystem:index }
+    
+ajax_star_rating_system:
+  path:  /ajax/starrating/update/data
+  defaults: { _controller: AppBundle:AjaxStarratingsystem:updateData }
