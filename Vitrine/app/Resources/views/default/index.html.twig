@@ -3,6 +3,11 @@
 {% block header %}
     {% include 'header.html.twig' %}
     <link rel="stylesheet" src="{{ asset('assets/vendor/css/index.css') }}"/>
+<script type="text/javascript" src="{{ asset('assets/vendor/js/smooth.js') }}"></script>
+
+
+        <link rel="stylesheet" src="{{ asset('assets/vendor/css/normalize.min.css') }}">
+        <link rel="stylesheet"src="{{ asset('assets/vendor/css/animate.min.css') }}">
 
 {% endblock %}
 
@@ -57,26 +62,28 @@
             </div>
         </div>
 
-    </div>
-    <div id="boxContent"style="    width: 100%;
+    </div
+    <div id="target">
+    <div  id="boxContent"style="    width: 100%;
          height: 500px;
          margin-bottom: 10%;
          text-align: center;    margin-top: 10%;
          border-bottom: 2px solid lightgrey;">
-        <ul style="display: inline-flex;margin-top: -80px;width: 100%;margin-left: 10px;">
+        <ul id="carte" style="display: inline-flex;margin-top: -80px;    width: 90%;
+    margin-left: 40px;">
             <!-- Controllers-->
             <li style="    width: 100%;" >
 
                 <!-- Cards-->
-                <div class="card card--big col-lg-11 col-md-10 col-sm-10">
+                <div class="card card--big col-lg-10 col-md-10 col-sm-10">
                     <div class="card__action-bar">
 
-                        <button class="card__button">Devis</button>
+                        <button class="card__button">BTS SIO</button>
                     </div>
-                    <div class="card__image"><img style="padding: 18px 0px 0px 0px;" src="{{asset('assets/images/stylo2.jpeg') }}"></div>
+                    <div class="card__image"><img style="padding: 18px 0px 0px 0px;" src="{{asset('assets/images/sio.png') }}"></div>
 
-                    <p style="text-align: left;" class="card__text">Contactez moi via mail : <span style="color: #8E3557">laurent.julienne@ynov.com</span> avec votre demande de site un devis vous sera ensuite envoyé (Mes prix sont pour l'instant très abordable). </p>
-
+                    <p style="text-align: left;" class="card__text"> j'ai commencé mon cursus informatique par un BTS SIO, qui m'a permis de me plonger dans un avant-goût de l'informatique professionnel </p>
+                            
                 </div>
             </li>
             <li style="width: 30%;">  <i style="    font-size: 50px;
@@ -88,16 +95,15 @@
 
 
 
-
                 <!-- Cards-->
-                <div class="card card--big col-lg-11 col-md-10 col-sm-10">
+                <div class="card card--big col-lg-10 col-md-10 col-sm-10">
                     <div class="card__action-bar">
 
-                        <button class="card__button">Envoi au demandeur</button>
+                        <button class="card__button">L2 Informatique</button>
                     </div>
-                    <div class="card__image"><img src="{{asset('assets/images/envoi.png') }}"></div>
+                    <div class="card__image"><img src="{{asset('assets/images/licence.png') }}"></div>
 
-                    <p style="text-align: left;" class="card__text">Une fois le site terminé, il vous sera envoyer afin que vous puissiez vérifier qu'il sois bien conforme à votre demande.</p>
+                    <p style="text-align: left;" class="card__text">Une fois mon bts en poche je me suis tourné vers la fac pour continuer, mais les cours proposés ne m'ont pas plu (trop de théorie, pas de pratique)</p>
 
                 </div>
             </li>
@@ -110,14 +116,14 @@
 
 
                 <!-- Cards-->
-                <div class="card card--big col-lg-11 col-md-10 col-sm-10">
+                <div class="card card--big col-lg-10 col-md-10 col-sm-10">
                     <div class="card__action-bar">
 
-                        <button class="card__button">Paiement</button>
+                        <button class="card__button">Ingésup</button>
                     </div>
-                    <div class="card__image"> <img src="{{asset('assets/images/paypal.jpeg') }}"></div>
+                    <div class="card__image"> <img src="{{asset('assets/images/ingesup.png') }}"></div>
 
-                    <p style='text-align: left;' class="card__text">Une fois satisfait je vous fournirai mon adresse paypal pour le paiement.</p>
+                    <p style='text-align: left;' class="card__text">Je me suis donc enfin tourné vers Ingésup, une école spécialisé en informatique où j'ai trouver des cours compatible avec ce que je cherchais</p>
 
 
                 </div>
@@ -126,6 +132,7 @@
         </ul>
 
     </div>
+                </div>
 
     <div id="info2" class="row" style="border-bottom: 2px solid lightgrey;">
         <div class="col-md-12 col-lg-12" style="    margin-bottom: 12%;">
@@ -142,8 +149,72 @@
         </div>
 
     </div>
+                
+    <div id="actu" class="row" style="border-bottom: 2px solid lightgrey;">
+        <div class="col-md-12 col-lg-12" style="    margin-bottom: 12%;">
+            <h3 id='travaux' style="text-align: center;    margin-bottom: 5%;
+    margin-top: 40px !important;     margin-bottom: 5% !important;
+                margin-top: -80px;"> Travaux actuels</h3>
+                <div id="textExplicatif" style='    width: 50%;
+    margin: auto;'>
+                    <p> Actuellement en stage chez Happy capital(début : mars 2017| fin: aout 2017),<br> j'ai pu augmenter mes compétences  et travailler sur une structure symfony2 complexe, <br>Voici donc quelques un de mes travaux à titre d'exemple.
+                </div>
+          
+        <ul>
+            <li><a id="demo01" href="#animatedModal">DEMO01</a></li>
+            <li><a id="demo02" href="#modal-02">DEMO02</a></li>
+        </ul>
+      
+      
+        <!--DEMO01-->
+        <div id="animatedModal">
+            <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+            <div  id="btn-close-modal" class="close-animatedModal"> 
+                CLOSE MODAL
+            </div>
+                
+            <div class="modal-content">
+                <!--Your modal content goes here-->
+            </div>
+        </div>
 
-    <div class="container" style="background: #8E3557; width: 100%;">
+
+
+
+    
+<script type="text/javascript" src="{{ asset('assets/vendor/js/animatedModal.min.js') }}"></script>
+        <script>
+
+            //demo 01
+            $("#demo01").animatedModal();
+
+            //demo 02
+            $("#demo02").animatedModal({
+                modalTarget:'modal-02',
+                animatedIn:'lightSpeedIn',
+                animatedOut:'bounceOutDown',
+                color:'#3498db',
+                // Callbacks
+                beforeOpen: function() {
+                    console.log("The animation was called");
+                },           
+                afterOpen: function() {
+                    console.log("The animation is completed");
+                }, 
+                beforeClose: function() {
+                    console.log("The animation was called");
+                }, 
+                afterClose: function() {
+                    console.log("The animation is completed");
+                }
+            });
+
+        </script>
+        </div>
+
+    </div>
+
+    <div class="container" id="contact" style="background: #8E3557; width: 100%;">
         <div class="row" style="margin-top: 5%;">
             <div class="col-sm-4" style="margin: auto;margin-bottom: 10%;margin-top: 5%;height: 500px;border-radius: 25Px;background: white;">
                 <h2 class=page-header>Formulaire de contact</h2>
@@ -158,30 +229,8 @@
 
 
 
-    <script type="text/javascript">
-        $('#lightSlider').lightSlider({
-            gallery: true,
-            item: 1,
-            loop: true,
-            slideMargin: 0,
-            thumbItem: 9
-        });
-    </script>
 
-    <script>
 
-        var button = document.getElementById('divertir'); // Assumes element with id='Vignette'
-
-        button.onclick = function ()
-        {
-
-            $('.video').css('display', '');
-            $('#yt').css('display', 'inherit');
-            $(this).hide();
-            $('#divertir').removeClass('hcbutton');
-            $('#next').css('display', '');
-        };
-    </script>
 
 {% endblock %}
 

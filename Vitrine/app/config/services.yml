@@ -8,8 +8,3 @@ services:
     #service_name:
     #    class: AppBundle\Directory\ClassName
     #    arguments: ['@another_service_name', 'plain_value', '%parameter_name%']
-    sim100.twig_extension:
-        class: AppBundle\Twig\StarRatingExtension
-        arguments: [@doctrine, "@request_stack"]
-        tags:
-            - { name : twig.extension }

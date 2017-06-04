@@ -23,10 +23,3 @@ easy_admin_bundle:
     prefix:   /admin    
     
     
-tuto_starratingsystem:
-    path:     /starratingsystem
-    defaults: { _controller: AppBundle:Starratingsystem:index }
-    
-ajax_star_rating_system:
-  path:  /ajax/starrating/update/data
-  defaults: { _controller: AppBundle:AjaxStarratingsystem:updateData }

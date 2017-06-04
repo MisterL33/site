@@ -176,9 +176,40 @@ button {
     transition: all 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+    #btn-close-modal {
+                width:100%;
+                text-align: center;
+                cursor:pointer;
+                color:#fff;
+            }
+
+
+#contactButton{
+        top: -42px;
+    position: relative;
+    float: right;
+    left: 0px;
+    color: white;
+}
+
+#contactButton:hover{
+    text-decoration: underline;
+}
+
+#cursusButton:hover{
+    text-decoration: underline;
+}
+#cursusButton{
+    top: -42px;
+    position: relative;
+    float: right;
+    left: -159px;
+    color: white;
+}
+
 .card__image img{
     max-width: 100%;
-    height: auto;
+    height: 154px;
 }
 .card__image:after {
     content: "";
@@ -280,7 +311,7 @@ button {
 }
 .card--big {
     box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
-    height: 470px;
+    height: 400px;
     min-height: 304px;
 }
 .card--big .card__image {
@@ -289,13 +320,13 @@ button {
     right: 0;
     top: 51px;
     opacity: 1;
-    max-height: 279px;
+        max-height: 154px;
 }
 .card--big .card__title {
     top: 135px;
 }
 .card--big .card__text {
-    top: 343px;
+    top: 230px;
 }
 .card--big .card__action-bar {
     left: 0;
