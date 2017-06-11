@@ -6,8 +6,8 @@
 <script type="text/javascript" src="{{ asset('assets/vendor/js/smooth.js') }}"></script>
 
 
-        <link rel="stylesheet" src="{{ asset('assets/vendor/css/normalize.min.css') }}">
-        <link rel="stylesheet"src="{{ asset('assets/vendor/css/animate.min.css') }}">
+        <link rel="stylesheet" src="{{ asset('assets/vendor/css/normalize.min.css') }}"/>
+        <link rel="stylesheet" src="{{ asset('assets/vendor/css/animate.css') }}"/>
 
 {% endblock %}
 
@@ -151,42 +151,65 @@
     </div>
                 
     <div id="actu" class="row" style="border-bottom: 2px solid lightgrey;">
+        
         <div class="col-md-12 col-lg-12" style="    margin-bottom: 12%;">
             <h3 id='travaux' style="text-align: center;    margin-bottom: 5%;
     margin-top: 40px !important;     margin-bottom: 5% !important;
-                margin-top: -80px;"> Travaux actuels</h3>
+                margin-top: -80px;" class="animated bounce"> Travaux actuels</h3>
                 <div id="textExplicatif" style='    width: 50%;
     margin: auto;'>
                     <p> Actuellement en stage chez Happy capital(début : mars 2017| fin: aout 2017),<br> j'ai pu augmenter mes compétences  et travailler sur une structure symfony2 complexe, <br>Voici donc quelques un de mes travaux à titre d'exemple.
                 </div>
           
-        <ul>
-            <li><a id="demo01" href="#animatedModal">DEMO01</a></li>
-            <li><a id="demo02" href="#modal-02">DEMO02</a></li>
+        <ul style="    margin: auto;
+    width: 50%;
+    height: auto;">
+            <li><a class="btnActu" id="demo01" href="#animatedModal">Reporting avec aide dynamique</a></li>
+            <li><a class="btnActu" id="demo02" href="#modal-02">Présentation design</a></li>
         </ul>
       
       
         <!--DEMO01-->
-        <div id="animatedModal">
+        <div id="animatedModal" style="    background-color: #8E3557 !important;">
             <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
             <div  id="btn-close-modal" class="close-animatedModal"> 
-                CLOSE MODAL
+                Fermer la fênetre
             </div>
                 
+            <div class="modal-content" style="min-height: 700px;
+    margin-top: 5%;">
+                <video id="reportingVid" autoplay="true" loop="true">
+<source src="{{asset('assets/gif/reporting2.mp4') }}" type="video/mp4">  
+</video>
+
+            </div>
+        </div>
+        
+             <!--DEMO02-->
+        <div id="modal-02">
+            <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
+            <div  id="btn-close-modal" class="close-modal-02"> 
+                CLOSE MODAL
+            </div>
+            
             <div class="modal-content">
-                <!--Your modal content goes here-->
+                <img src="{{asset('assets/images/design.png') }}">
             </div>
         </div>
 
+        
 
-
-
+<script type="text/javascript" src="{{ asset('assets/vendor/js/jquery.min.js') }}"></script>
+     <link rel="stylesheet" src="{{ asset('assets/vendor/css/animate.css') }}"/>
     
 <script type="text/javascript" src="{{ asset('assets/vendor/js/animatedModal.min.js') }}"></script>
         <script>
 
             //demo 01
-            $("#demo01").animatedModal();
+            $("#demo01").animatedModal({
+                color:'#8E3557',
+
+            });
 
             //demo 02
             $("#demo02").animatedModal({
@@ -229,7 +252,12 @@
 
 
 
-
+                <style>.btnActu{
+        border: 2px solid #8E3557;
+    background-color: #8E3557;
+    border-radius: 4px;
+    color: white;
+}</style>
 
 
 {% endblock %}
