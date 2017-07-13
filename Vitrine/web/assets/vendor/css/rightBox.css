@@ -1,0 +1,83 @@
+
+
+.btnActu{
+    border: 2px solid #8E3557;
+    background-color: #8E3557;
+    border-radius: 4px;
+    color: white;
+}
+
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 30 mai 2017, 11:03:45
+    Author     : stage
+*/
+
+
+
+
+.rightBox {
+    width: 300px;
+    margin: 0 auto;
+    -moz-box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.3), 0 0.1em 0.2em rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.3), 0 0.1em 0.2em rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.3), 0 0.1em 0.2em rgba(0, 0, 0, 0.4);
+    -moz-border-radius: 0.35em;
+    -webkit-border-radius: 0.35em;
+    border-radius: 0.35em;
+    display: none;
+    position: fixed;
+    height: 0;
+    transition: height 0.3s ease-out;
+    min-height: 300px;
+    bottom: auto;
+    top: 242px;
+    z-index: 1;
+
+}
+
+
+
+.rightBox header,
+.rightBox section {
+    padding: 0 1em;
+}
+.rightBox header {
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 0 -0.08em 0 #073d3d;
+    -moz-border-radius: 0.35em 0.35em 0 0;
+    -webkit-border-radius: 0.35em;
+    border-radius: 0.35em 0.35em 0 0;
+    border: 1px solid;
+    border-color: #E0027A;
+    background-color: #E0027A;
+
+    background-size: 100%;
+
+    -moz-box-shadow: 0 0.1em 0.1em rgba(255, 255, 255, 0.3) inset;
+    -webkit-box-shadow: 0 0.1em 0.1em rgba(255, 255, 255, 0.3) inset;
+    box-shadow: 0 0.1em 0.1em rgba(255, 255, 255, 0.3) inset;
+}
+.rightBox header h2 {
+    font-size: 1em;
+    line-height: 1.1;
+    color: white;
+}
+.rightBox section {
+    background-color: #fff;
+    border: 1px solid;
+    border-color: #ccc transparent transparent;
+}
+.rightBox section:last-child {
+    -moz-border-radius: 0 0 0.35em 0.35em;
+    -webkit-border-radius: 0;
+    border-radius: 0 0 0.35em 0.35em;
+}
+
+
+

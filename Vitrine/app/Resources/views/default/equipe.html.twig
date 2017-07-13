@@ -1,0 +1,109 @@
+<div id="allContent" class="col-lg-12">
+
+
+    <div id="info2" class="row col-lg-8 col-md-6" >
+        <div class="col-md-12 col-lg-12" style="    margin-bottom: 12%;">
+
+            <div class="ctrl" style="float: right; ">
+                <div class="cardWrap">
+                    <div class="cardFlip front frontanimation"><h3 style="    color: white;     padding: 8px;
+                                                                   border-bottom: 2px solid black">Laurent - Dev Web</h3></div>
+                    <div class="cardFlip back backanimation"><h3 style="    color: white;     padding: 8px;
+                                                                 border-bottom: 2px solid black;"> Compétences :  </h3> <br> <img style="width: 20%;" src="{{asset('assets/images/nodejs.png') }}"> <img style="width: 20%;" src="{{asset('assets/images/css3.png') }}"> <img style="width: 18%;" src="{{asset('assets/images/logosymf.png') }}"> <img style="width: 18%;" src="{{asset('assets/images/html.png') }}"><img style="width: 30%;" src="{{asset('assets/images/phpsql.png') }}"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 col-lg-12" style="    margin-bottom: 12%;">
+
+            <div id="textExplicatif" style='float: right;    width: 100%;
+                 margin: auto;'>
+            </div>
+
+            <ul id='demoSkill' style="    margin: auto;
+                width: 100%;
+                height: auto;
+                min-height: 40px;">
+                <li><a class="btnActu" id="demo01" href="#animatedModal">Reporting avec aide dynamique</a></li>
+                <li><a class="btnActu" id="demo02" href="#modal-02">Présentation design</a></li>
+            </ul>
+
+
+            <!--DEMO01-->
+            <div id="animatedModal" style="    background-color: #8E3557 !important;">
+                <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+                <div  id="btn-close-modal" class="close-animatedModal">
+                    Fermer la fênetre
+                </div>
+
+                <div class="modal-content" style="min-height: 700px;
+                     margin-top: 5%;">
+                    <video id="reportingVid" autoplay="true" loop="true">
+                        <source src="{{asset('assets/gif/reporting2.mp4') }}" type="video/mp4">
+                    </video>
+
+                </div>
+            </div>
+
+            <!--DEMO02-->
+            <div id="modal-02">
+                <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
+                <div  id="btn-close-modal" class="close-modal-02">
+                    CLOSE MODAL
+                </div>
+
+                <div class="modal-content">
+                    <img src="{{asset('assets/images/design.png') }}">
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class='row col-lg-3 col-md-4 col-sm-8 col-xs-4' id='explicationContent'>
+        <div >
+            <aside class="rightBox animated">
+                <header>
+                    <h2 style="    text-align: center;
+                        top: 19px;
+                        position: relative;">Actualités</h2>
+                </header>
+                <section style="background-image: url({{ asset('images/cahier.png') }}); min-height: 250px;">
+                    <p style="text-align: left;font-family: 'Fresca', sans-serif;
+                       font-size: 18px; margin-top:30px; color: white;" id="textContent">Dernier stage : Developpeur web chez Happy-Capital (4 mois), l'entreprise d'equity crowdfunding</p> <br>
+                    <img width='50' src="{{asset('assets/images/etoile.jpg') }}" >
+                    <a id='btnHappy' style='color: white; cursor:pointer;' target='_blank' href='https://www.happy-capital.com/'>Visiter Happy-Capital</a>
+                    <p style='    font-size: 15Px;
+                       margin-top: 20px;
+                       color: white;'>Lors de ce stage j'ai pu travaillé sur une architecture symfony2 complexe et ainsi augmenter mon niveau général</p>
+
+
+                    <div style="text-align: left;font-family: 'Indie Flower', cursive;
+                         font-size: 18px;" class='correctionContent' id="correctionContent1"></div>
+
+
+                    <div style="text-align: left;font-family: 'Indie Flower', cursive;
+                         font-size: 18px;" class='correctionContent hidden' id="correctionContent2"></div>
+
+
+                    <div style="text-align: left;font-family: 'Indie Flower', cursive;
+                         font-size: 18px;" class='correctionContent hidden' id="correctionContent3"></div>
+
+                    <div style="text-align: left;font-family: 'Indie Flower', cursive;
+                         font-size: 18px;" class='correctionContent hidden' id="correctionContent4"></div>
+
+                    <div style="text-align: left;font-family: 'Indie Flower', cursive;
+                         font-size: 18px;" class='correctionContent hidden' id="correctionContent5"></div>
+                    <br> <br>
+
+
+                </section>
+
+
+            </aside>
+        </div>
+    </div>
+
+</div>

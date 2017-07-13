@@ -3,11 +3,11 @@
 {% block header %}
     {% include 'header.html.twig' %}
     <link rel="stylesheet" src="{{ asset('assets/vendor/css/index.css') }}"/>
-<script type="text/javascript" src="{{ asset('assets/vendor/js/smooth.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/vendor/js/smooth.js') }}"></script>
 
 
-        <link rel="stylesheet" src="{{ asset('assets/vendor/css/normalize.min.css') }}"/>
-        <link rel="stylesheet" src="{{ asset('assets/vendor/css/animate.css') }}"/>
+    <link rel="stylesheet" src="{{ asset('assets/vendor/css/normalize.min.css') }}"/>
+    <link rel="stylesheet" src="{{ asset('assets/vendor/css/animate.css') }}"/>
 
 {% endblock %}
 
@@ -64,182 +64,80 @@
 
     </div
     <div id="target">
-    <div  id="boxContent"style="    width: 100%;
-         height: 500px;
-         margin-bottom: 10%;
-         text-align: center;    margin-top: 10%;
-         border-bottom: 2px solid lightgrey;">
-        <ul id="carte" style="display: inline-flex;margin-top: -80px;    width: 90%;
-    margin-left: 40px;">
-            <!-- Controllers-->
-            <li style="    width: 100%;" >
-
-                <!-- Cards-->
-                <div class="card card--big col-lg-10 col-md-10 col-sm-10">
-                    <div class="card__action-bar">
-
-                        <button class="card__button">BTS SIO</button>
-                    </div>
-                    <div class="card__image"><img style="padding: 18px 0px 0px 0px;" src="{{asset('assets/images/sio.png') }}"></div>
-
-                    <p style="text-align: left;" class="card__text"> j'ai commencé mon cursus informatique par un BTS SIO, qui m'a permis de me plonger dans un avant-goût de l'informatique professionnel </p>
-                            
-                </div>
-            </li>
-            <li style="width: 30%;">  <i style="    font-size: 50px;
-                                         color: #8E3557;
-                                         top: 200px;
-                                         position: relative; " class="fa fa-arrow-right" aria-hidden="true"></i> </li>
-            <li style="    width: 100%;">
-
-
-
-
-                <!-- Cards-->
-                <div class="card card--big col-lg-10 col-md-10 col-sm-10">
-                    <div class="card__action-bar">
-
-                        <button class="card__button">L2 Informatique</button>
-                    </div>
-                    <div class="card__image"><img src="{{asset('assets/images/licence.png') }}"></div>
-
-                    <p style="text-align: left;" class="card__text">Une fois mon bts en poche je me suis tourné vers la fac pour continuer, mais les cours proposés ne m'ont pas plu (trop de théorie, pas de pratique)</p>
-
-                </div>
-            </li>
-            <li style="width: 30%;">  <i style="    font-size: 50px;
-                                         color: #8E3557;
-                                         top: 200px;
-                                         position: relative; " class="fa fa-arrow-right" aria-hidden="true"></i> </li>
-            <li style="    width: 100%;" >
+        <div  id="boxContent"style="    width: 100%;
+              height: 500px;
+              margin-bottom: 10%;
+              text-align: center;    margin-top: 10%;
+              border-bottom: 2px solid lightgrey;">
+            <ul id="carte" style="display: inline-flex;margin-top: -80px;    width: 90%;
+                margin-left: 40px;">
                 <!-- Controllers-->
+                <li style="    width: 100%;" >
 
+                    <!-- Cards-->
+                    <div class="card card--big col-lg-10 col-md-10 col-sm-10">
+                        <div class="card__action-bar">
 
-                <!-- Cards-->
-                <div class="card card--big col-lg-10 col-md-10 col-sm-10">
-                    <div class="card__action-bar">
+                            <button class="card__button">BTS SIO</button>
+                        </div>
+                        <div class="card__image"><img style="padding: 18px 0px 0px 0px;" src="{{asset('assets/images/sio.png') }}"></div>
 
-                        <button class="card__button">Ingésup</button>
+                        <p style="text-align: left;" class="card__text"> j'ai commencé mon cursus informatique par un BTS SIO, qui m'a permis de me plonger dans un avant-goût de l'informatique professionnel </p>
+
                     </div>
-                    <div class="card__image"> <img src="{{asset('assets/images/ingesup.png') }}"></div>
+                </li>
+                <li style="width: 30%;">  <i style="    font-size: 50px;
+                                             color: #8E3557;
+                                             top: 200px;
+                                             position: relative; " class="fa fa-arrow-right" aria-hidden="true"></i> </li>
+                <li style="    width: 100%;">
 
-                    <p style='text-align: left;' class="card__text">Je me suis donc enfin tourné vers Ingésup, une école spécialisé en informatique où j'ai trouver des cours compatible avec ce que je cherchais</p>
 
 
-                </div>
-            </li>
 
-        </ul>
+                    <!-- Cards-->
+                    <div class="card card--big col-lg-10 col-md-10 col-sm-10">
+                        <div class="card__action-bar">
 
+                            <button class="card__button">L2 Informatique</button>
+                        </div>
+                        <div class="card__image"><img src="{{asset('assets/images/licence.png') }}"></div>
+
+                        <p style="text-align: left;" class="card__text">Une fois mon bts en poche je me suis tourné vers la fac pour continuer, mais les cours proposés ne m'ont pas plu (trop de théorie, pas de pratique)</p>
+
+                    </div>
+                </li>
+                <li style="width: 30%;">  <i style="    font-size: 50px;
+                                             color: #8E3557;
+                                             top: 200px;
+                                             position: relative; " class="fa fa-arrow-right" aria-hidden="true"></i> </li>
+                <li style="    width: 100%;" >
+                    <!-- Controllers-->
+
+
+                    <!-- Cards-->
+                    <div class="card card--big col-lg-10 col-md-10 col-sm-10">
+                        <div class="card__action-bar">
+
+                            <button class="card__button">Ingésup</button>
+                        </div>
+                        <div class="card__image"> <img src="{{asset('assets/images/ingesup.png') }}"></div>
+
+                        <p style='text-align: left;' class="card__text">Je me suis donc enfin tourné vers Ingésup, une école spécialisé en informatique où j'ai trouver des cours compatible avec ce que je cherchais</p>
+
+
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
     </div>
-                </div>
+    {{include('default/equipe.html.twig')}}
 
-    <div id="info2" class="row" style="border-bottom: 2px solid lightgrey;">
-        <div class="col-md-12 col-lg-12" style="    margin-bottom: 12%;">
-            <h3 style="text-align: center;     margin-bottom: 10%;
-                margin-top: -80px;"> Equipe </h3>
-            <div class="ctrl">
-                <div class="cardWrap">
-                    <div class="cardFlip front frontanimation"><h3 style="    color: white;     padding: 8px;
-                                                                   border-bottom: 2px solid black">Laurent - Dev Web</h3></div>
-                    <div class="cardFlip back backanimation"><h3 style="    color: white;     padding: 8px;
-                                                                 border-bottom: 2px solid black;"> Compétences :  </h3> <br> <img style="width: 20%;" src="{{asset('assets/images/nodejs.png') }}"> <img style="width: 20%;" src="{{asset('assets/images/css3.png') }}"> <img style="width: 18%;" src="{{asset('assets/images/logosymf.png') }}"> <img style="width: 18%;" src="{{asset('assets/images/html.png') }}"><img style="width: 30%;" src="{{asset('assets/images/phpsql.png') }}"></div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-                
-    <div id="actu" class="row" style="border-bottom: 2px solid lightgrey;">
-        
-        <div class="col-md-12 col-lg-12" style="    margin-bottom: 12%;">
-            <h3 id='travaux' style="text-align: center;    margin-bottom: 5%;
-    margin-top: 40px !important;     margin-bottom: 5% !important;
-                margin-top: -80px;" class="animated bounce"> Travaux actuels</h3>
-                <div id="textExplicatif" style='    width: 50%;
-    margin: auto;'>
-                    <p> Actuellement en stage chez Happy capital(début : mars 2017| fin: aout 2017),<br> j'ai pu augmenter mes compétences  et travailler sur une structure symfony2 complexe, <br>Voici donc quelques un de mes travaux à titre d'exemple.
-                </div>
-          
-        <ul style="    margin: auto;
-    width: 50%;
-    height: auto;">
-            <li><a class="btnActu" id="demo01" href="#animatedModal">Reporting avec aide dynamique</a></li>
-            <li><a class="btnActu" id="demo02" href="#modal-02">Présentation design</a></li>
-        </ul>
-      
-      
-        <!--DEMO01-->
-        <div id="animatedModal" style="    background-color: #8E3557 !important;">
-            <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
-            <div  id="btn-close-modal" class="close-animatedModal"> 
-                Fermer la fênetre
-            </div>
-                
-            <div class="modal-content" style="min-height: 700px;
-    margin-top: 5%;">
-                <video id="reportingVid" autoplay="true" loop="true">
-<source src="{{asset('assets/gif/reporting2.mp4') }}" type="video/mp4">  
-</video>
-
-            </div>
-        </div>
-        
-             <!--DEMO02-->
-        <div id="modal-02">
-            <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
-            <div  id="btn-close-modal" class="close-modal-02"> 
-                CLOSE MODAL
-            </div>
-            
-            <div class="modal-content">
-                <img src="{{asset('assets/images/design.png') }}">
-            </div>
-        </div>
-
-        
-
-<script type="text/javascript" src="{{ asset('assets/vendor/js/jquery.min.js') }}"></script>
-     <link rel="stylesheet" src="{{ asset('assets/vendor/css/animate.css') }}"/>
-    
-<script type="text/javascript" src="{{ asset('assets/vendor/js/animatedModal.min.js') }}"></script>
-        <script>
-
-            //demo 01
-            $("#demo01").animatedModal({
-                color:'#8E3557',
-
-            });
-
-            //demo 02
-            $("#demo02").animatedModal({
-                modalTarget:'modal-02',
-                animatedIn:'lightSpeedIn',
-                animatedOut:'bounceOutDown',
-                color:'#3498db',
-                // Callbacks
-                beforeOpen: function() {
-                    console.log("The animation was called");
-                },           
-                afterOpen: function() {
-                    console.log("The animation is completed");
-                }, 
-                beforeClose: function() {
-                    console.log("The animation was called");
-                }, 
-                afterClose: function() {
-                    console.log("The animation is completed");
-                }
-            });
-
-        </script>
-        </div>
-
-    </div>
-
-    <div class="container" id="contact" style="background: #8E3557; width: 100%;">
-        <div class="row" style="margin-top: 5%;">
-            <div class="col-sm-4" style="margin: auto;margin-bottom: 10%;margin-top: 5%;height: 500px;border-radius: 25Px;background: white;">
+    <div class="row container" id="contact" style="background: #8E3557; width: 100%;">
+        <div class="row" style="margin-top: 5%; width: 100%;">
+            <div class="col-sm-4" style="margin: auto;margin-bottom: 10%;margin-top: 5%;height: 500px;border-radius: 25Px;background: white; min-width: 500px;">
                 <h2 class=page-header>Formulaire de contact</h2>
 
                 {{form_start(form)}}
@@ -252,19 +150,221 @@
 
 
 
-                <style>.btnActu{
-        border: 2px solid #8E3557;
-    background-color: #8E3557;
-    border-radius: 4px;
-    color: white;
-}</style>
+    <style>.btnActu{
+            border: 2px solid #8E3557;
+            background-color: #8E3557;
+            border-radius: 4px;
+            color: white;
+        }
+
+
+        /*
+        To change this license header, choose License Headers in Project Properties.
+        To change this template file, choose Tools | Templates
+        and open the template in the editor.
+        */
+        /*
+            Created on : 30 mai 2017, 11:03:45
+            Author     : stage
+        */
+
+
+
+        #btnHappy:hover{
+            color: #E0027A !important;;
+        }
+
+        #demoSkill li{
+            float: right;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .ctrl{
+                width: 100% !important;
+            }
+
+        }
+
+        .rightBox {
+            width: 300px;
+            margin: 0 auto;
+            -moz-box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.3), 0 0.1em 0.2em rgba(0, 0, 0, 0.4);
+            -webkit-box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.3), 0 0.1em 0.2em rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.3), 0 0.1em 0.2em rgba(0, 0, 0, 0.4);
+            -moz-border-radius: 0.35em;
+            -webkit-border-radius: 0.35em;
+            border-radius: 0.35em;
+            display: none;
+            position: fixed;
+            height: 0;
+            transition: height 0.3s ease-out;
+            min-height: 300px;
+            bottom: auto;
+            top: 242px;
+            z-index: 1;
+            background-color: #8E3557;
+            border: 2px solid black;
+
+        }
+
+
+
+        .rightBox header,
+        .rightBox section {
+            padding: 0 1em;
+        }
+        .rightBox header {
+            color: rgba(255, 255, 255, 0.85);
+            text-shadow: 0 -0.08em 0 #073d3d;
+            -moz-border-radius: 0.35em 0.35em 0 0;
+            -webkit-border-radius: 0.35em;
+            border-radius: 0.35em 0.35em 0 0;
+            border-bottom: 2px solid;
+            height: 60px;
+            border-color:black;
+            background-color: #8E3557;
+
+            background-size: 100%;
+
+            -moz-box-shadow: 0 0.1em 0.1em rgba(255, 255, 255, 0.3) inset;
+            -webkit-box-shadow: 0 0.1em 0.1em rgba(255, 255, 255, 0.3) inset;
+            box-shadow: 0 0.1em 0.1em rgba(255, 255, 255, 0.3) inset;
+        }
+        .rightBox header h2 {
+            font-size: 1em;
+            line-height: 1.1;
+            color: white;
+        }
+        .rightBox section {
+            background-color: #fff;
+
+            background-color: #8E3557;
+
+        }
+        .rightBox section:last-child {
+            -moz-border-radius: 0 0 0.35em 0.35em;
+            -webkit-border-radius: 0;
+            border-radius: 0 0 0.35em 0.35em;
+        }
+
+
+        #explicationContent{
+            min-height: 500px;
+            float: right;
+            height: auto;
+            min-width: 450px;
+        }
+
+
+    </style>
+
+
+    <script type="text/javascript" src="{{ asset('assets/vendor/js/jquery.min.js') }}"></script>
+    <link rel="stylesheet" src="{{ asset('assets/vendor/css/animate.css') }}"/>
+    <link href="https://fonts.googleapis.com/css?family=Fresca" rel="stylesheet">
+    <script type="text/javascript" src="{{ asset('assets/vendor/js/animatedModal.min.js') }}"></script>
+
+
+    <script>
+
+        //demo 01
+        $("#demo01").animatedModal({
+            color: '#8E3557',
+        });
+
+        //demo 02
+        $("#demo02").animatedModal({
+            modalTarget: 'modal-02',
+            animatedIn: 'lightSpeedIn',
+            animatedOut: 'bounceOutDown',
+            color: '#3498db',
+            // Callbacks
+            beforeOpen: function ()
+            {
+                console.log("The animation was called");
+            },
+            afterOpen: function ()
+            {
+                console.log("The animation is completed");
+            },
+            beforeClose: function ()
+            {
+                console.log("The animation was called");
+            },
+            afterClose: function ()
+            {
+                console.log("The animation is completed");
+            }
+        });
+
+    </script>
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+
+
+    <script src='//cloud.tinymce.com/stable/tinymce.min.js?apiKey=11clnlt8keslk5e4efyhq5hwy1wd522i7euut33cggizjlps'></script>
+
+
+
+
+
+    <script>
+
+        $(function ()
+        {
+
+
+            $(window).scroll(function ()
+            {
+                var scrollTop = $(this).scrollTop();
+                console.log("scroll TOp : " + scrollTop);
+                var base = $('#topTitre').height() + $('#carouselHacked').height() + $('#info1').height() + $('#boxContent').height() - 100;
+                console.log("base1 : " + " " + base);
+
+                var arret = $('#topTitre').height() + $('#carouselHacked').height() + $('#info1').height() + $('#boxContent').height() + $('#allContent').height() - 100;
+                ;
+                if (window.matchMedia("(max-width: 1200px)").matches)
+                {
+                    var base = $('#topTitre').height() + $('#carouselHacked').height() + $('#info1').height() + $('#boxContent').height();
+                    console.log("base1 : " + " " + base);
+
+                    var arret = $('#topTitre').height() + $('#carouselHacked').height() + $('#info1').height() + $('#boxContent').height() + $('#allContent').height() + 300;
+                    ;
+                }
+
+                console.log("arret1 " + arret);
+                if (scrollTop > base && scrollTop < arret)
+                {
+                    var scroll = scrollTop - base;
+                    console.log("scroll " + scroll);
+                    console.log("scrollTop2 " + scrollTop);
+
+                    console.log("arret2 " + arret);
+
+                    $('.rightBox').css('display', 'block');
+                    $('.rightBox').attr('style', 'display: block !important');
+                    $('.rightBox').css('height', '450px');
+                    $('.rightBox section').css('background-size', '0px');
+                    $('.rightBox section').css('background-size', '29px');
+                    var tot = 0;
+                    i = 0;
+
+
+
+                }
+
+                else
+                {
+                    $('.rightBox').css('display', 'none');
+                    $('.rightBox').attr('style', 'display: none !important');
+                }
+            });
+        });
+
+        // i--;
+    </script>
 
 
 {% endblock %}
-
-
-
-
-
-
-

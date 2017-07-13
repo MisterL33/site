@@ -1,0 +1,96 @@
+
+
+<div id="actu"  style="border-bottom: 2px solid lightgrey;">
+
+    <div class="col-md-6 col-lg-6" style="    margin-bottom: 12%;">
+        <h3 id='travaux' style="text-align: center;    margin-bottom: 5%;
+            margin-top: 40px !important;     margin-bottom: 5% !important;
+            margin-top: -80px;" class="animated bounce"> Travaux actuels</h3>
+        <div id="textExplicatif" style='    width: 50%;
+             margin: auto;'>
+            <p> Actuellement en stage chez Happy capital(début : mars 2017| fin: aout 2017),<br> j'ai pu augmenter mes compétences  et travailler sur une structure symfony2 complexe, <br>Voici donc quelques un de mes travaux à titre d'exemple.
+        </div>
+
+        <ul style="    margin: auto;
+            width: 50%;
+            height: auto;">
+            <li><a class="btnActu" id="demo01" href="#animatedModal">Reporting avec aide dynamique</a></li>
+            <li><a class="btnActu" id="demo02" href="#modal-02">Présentation design</a></li>
+        </ul>
+
+
+        <!--DEMO01-->
+        <div id="animatedModal" style="    background-color: #8E3557 !important;">
+            <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+            <div  id="btn-close-modal" class="close-animatedModal">
+                Fermer la fênetre
+            </div>
+
+            <div class="modal-content" style="min-height: 700px;
+                 margin-top: 5%;">
+                <video id="reportingVid" autoplay="true" loop="true">
+                    <source src="{{asset('assets/gif/reporting2.mp4') }}" type="video/mp4">
+                </video>
+
+            </div>
+        </div>
+
+        <!--DEMO02-->
+        <div id="modal-02">
+            <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
+            <div  id="btn-close-modal" class="close-modal-02">
+                CLOSE MODAL
+            </div>
+
+            <div class="modal-content">
+                <img src="{{asset('assets/images/design.png') }}">
+            </div>
+        </div>
+
+
+        <div class='col-lg-6 col-md-4 col-sm-8 col-xs-4' id='explicationContent'>
+
+            <aside class="rightBox animated">
+                <header>
+                    <h2>Exemple</h2>
+                </header>
+                <section style="background-image: url({{ asset('images/cahier.png') }}); min-height: 250px;">
+                    <p style="text-align: left;font-family: 'Indie Flower', cursive;
+                       font-size: 18px;" id="textContent">hop</p>
+
+                    <div class='hidden' id='titreCorrection'>
+                        <br>
+                        <h3> Remarque de Happy Capital :  </h3>
+                        <br>
+                    </div>
+
+                    <div style="text-align: left;font-family: 'Indie Flower', cursive;
+                         font-size: 18px;" class='correctionContent' id="correctionContent1"></div>
+
+
+                    <div style="text-align: left;font-family: 'Indie Flower', cursive;
+                         font-size: 18px;" class='correctionContent hidden' id="correctionContent2"></div>
+
+
+                    <div style="text-align: left;font-family: 'Indie Flower', cursive;
+                         font-size: 18px;" class='correctionContent hidden' id="correctionContent3"></div>
+
+                    <div style="text-align: left;font-family: 'Indie Flower', cursive;
+                         font-size: 18px;" class='correctionContent hidden' id="correctionContent4"></div>
+
+                    <div style="text-align: left;font-family: 'Indie Flower', cursive;
+                         font-size: 18px;" class='correctionContent hidden' id="correctionContent5"></div>
+                    <br> <br>
+
+
+                </section>
+
+
+            </aside>
+
+        </div>
+
+
+    </div>
+
+</div>
