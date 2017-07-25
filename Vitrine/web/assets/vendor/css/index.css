@@ -186,28 +186,7 @@ button {
             }
 
 
-#contactButton{
-        top: -42px;
-    position: relative;
-    float: right;
-    left: 0px;
-    color: white;
-}
 
-#contactButton:hover{
-    text-decoration: underline;
-}
-
-#cursusButton:hover{
-    text-decoration: underline;
-}
-#cursusButton{
-    top: -42px;
-    position: relative;
-    float: right;
-    left: -159px;
-    color: white;
-}
 
 .card__image img{
     max-width: 100%;
@@ -394,5 +373,6 @@ button {
     background: #8E3557;
     margin-left: 40%;
 }
+
 
 
