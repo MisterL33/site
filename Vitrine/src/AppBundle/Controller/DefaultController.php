@@ -54,15 +54,6 @@ class DefaultController extends Controller
             $sn = $this->getDoctrine()->getManager();
             $sn->persist($contact);
             $sn->flush();
-
-
-            $message = \Swift_Message::newInstance()
-                    ->setSubject($subject)
-                    ->setFrom($name)
-                    ->setTo('laurent.julienne974@gmail.com')
-                    ->setBody($this->renderView('default/sendEmail.html.twig', array('name' => $name)), 'text/html');
-
-            $this->get('mailer')->send($message);
         }
 
 
