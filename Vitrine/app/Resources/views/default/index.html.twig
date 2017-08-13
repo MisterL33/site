@@ -141,7 +141,7 @@
     display: inline-block;">
         <div id="cv" style="display: inline-block;
     width: 100%;     float: none !important;" class="col-lg-6 col-md-6 col-sm-4 col-xs-4">
-        <img style="    max-width: 100%;
+        <img style="    max-width: 50%;
              box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
     margin-bottom: 15%;" src="{{asset('assets/images/cvJL.png') }}">
         </div>
@@ -153,21 +153,25 @@
     display: inline-block;">
         <div id="reco" style="display: inline-block;
     width: 100%;     float: none !important;" class="col-lg-6 col-md-6 col-sm-4 col-xs-4">
-        <img style="    max-width: 100%;
+        <img style="    max-width: 50%;
              box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
     margin-bottom: 15%;" src="{{asset('assets/images/reco.jpg') }}">
         </div>
+        
+   
+
+
     </div>
 
-    <div class="row container" id="contact" style="background: #8E3557; width: 100%;">
+    <div class="row container" id="contact" style="background: #8E3557; width: 105%;">
         <div class="row" style="margin-top: 5%; width: 100%;">
-            <div class="col-sm-4" style="margin: auto;margin-bottom: 10%;margin-top: 5%;height: 500px;border-radius: 25Px;background: white; min-width: 500px;">
+            <div class="col-sm-4" style="margin: auto;margin-bottom: 10%;margin-top: 5%;height: 450px;border-radius: 25Px;background: white; min-width: 450px; float: none !important;">
                 <h2 class=page-header>Formulaire de contact</h2>
 
                 {{form_start(form)}}
                 {{form_widget(form)}}
                 {{form_end(form)}}
-
+             
             </div>
         </div>
     </div>
@@ -320,8 +324,93 @@
                 console.log("The animation is completed");
             }
         });
+        
+
+
+
 
     </script>
+    
+    <script>
+ $(function (){
+      $( document ).ready(function() {
+console.log('lol');
+var selector = document.getElementByTagName('form');
+});
+
+$( "#form_Save" ).click(function(event) {
+ console.log('ugh');
+ 
+ event.preventDefault();
+ var $this = $(this);
+ $.ajax({
+      url: $this.attr('action'),
+      type: $this.attr('method'),
+      data: new FormData( $this[0] ),
+      processData: false,
+      contentType: false,
+      statusCode: {
+		//traitement en cas de succès
+                200: function(response) {
+                    var successMessage = response.successMessage ;
+                    //on vide les champs formulaires ou on le supprime ou ...
+                  
+		    //on retire le loader...
+		   //on prévient l'utilistateur du bonne envoi...
+
+                },
+                 //traitement en cas d'erreur (on peut aussi traiter le cas erreur 500...)
+                412: function(response) {
+                    var errorsForm = response.responseJSON.formErrors ;
+                    //on affiche les erreurs...
+                    },
+                }
+            
+    });
+});
+ });
+
+
+        </script>
+        
+        <script>
+            
+            function ajaxForm() {
+//quand le formulaire est soumi
+var selector = document.getElementByTagName('form');
+    $(selector).submit( function(event) {
+        console.log('ugh');
+        // Eviter le comportement par défaut (soumettre le formulaire)
+        event.preventDefault();
+        var $this = $(this);
+        //Ici on peut ajouter un loader...
+        $.ajax({
+            url: $this.attr('action'),
+            type: $this.attr('method'),
+            data: new FormData( $this[0] ),
+            processData: false,
+            contentType: false,
+            statusCode: {
+		//traitement en cas de succès
+                200: function(response) {
+                    var successMessage = response.successMessage ;
+                    //on vide les champs formulaires ou on le supprime ou ...
+                    $(selector).trigger("reset");
+		    //on retire le loader...
+		   //on prévient l'utilistateur du bonne envoi...
+
+                },
+                 //traitement en cas d'erreur (on peut aussi traiter le cas erreur 500...)
+                412: function(response) {
+                    var errorsForm = response.responseJSON.formErrors ;
+                    //on affiche les erreurs...
+                    });
+                }
+            }
+       });
+    });
+};
+            </script>
 
 
 
@@ -342,30 +431,31 @@
 
             $(window).scroll(function ()
             {
+                
                 var scrollTop = $(this).scrollTop();
-                console.log("scroll TOp : " + scrollTop);
+               // console.log("scroll TOp : " + scrollTop);
                 var base = $('#topTitre').height() + $('#carouselHacked').height() + $('#info1').height() + $('#boxContent').height() - 100;
-                console.log("base1 : " + " " + base);
+               // console.log("base1 : " + " " + base);
 
                 var arret = $('#topTitre').height() + $('#carouselHacked').height() + $('#info1').height() + $('#boxContent').height() + $('#allContent').height() - 100;
                 ;
                 if (window.matchMedia("(max-width: 1200px)").matches)
                 {
                     var base = $('#topTitre').height() + $('#carouselHacked').height() + $('#info1').height() + $('#boxContent').height();
-                    console.log("base1 : " + " " + base);
+                   // console.log("base1 : " + " " + base);
 
                     var arret = $('#topTitre').height() + $('#carouselHacked').height() + $('#info1').height() + $('#boxContent').height() + $('#allContent').height() + 300;
                     ;
                 }
 
-                console.log("arret1 " + arret);
+             //   console.log("arret1 " + arret);
                 if (scrollTop > base && scrollTop < arret)
                 {
                     var scroll = scrollTop - base;
-                    console.log("scroll " + scroll);
-                    console.log("scrollTop2 " + scrollTop);
+                 //   console.log("scroll " + scroll);
+                 //   console.log("scrollTop2 " + scrollTop);
 
-                    console.log("arret2 " + arret);
+                //    console.log("arret2 " + arret);
 
                     $('.rightBox').css('display', 'block');
                     $('.rightBox').attr('style', 'display: block !important');

@@ -64,24 +64,26 @@ class DefaultController extends Controller
         ));
     }
 
-    public function randomMovies($genre)
-    {
+public function ajaxFormAction(Request $request) {
 
-        $repository = $this->getDoctrine()
-                ->getManager()
-                ->getRepository('AppBundle:Movies')
-        ;
+        $formService = $this->getFormService();
+        //création du formulaire
+        $myFormObject = new Contact();
+        $myEntityForm   = $this->createForm(new Contact(), $myFormObject);
+        $myEntityForm->handleRequest($request);
 
-        $movies = $repository->findAll();
-        $link = '';
-        foreach ($movies as $mov)
-        {
-            if ($genre == $mov->getGenre() && $mov->getEtoile() == 5)
-            {
-                $link = $mov->getLink();
-            }
-        }
-        return $link;
+        if ($myEntityForm->isValid()) {
+	   //do your stuff ...
+           $username = $formService->$form["form_name"]->getData();
+
+            //envoi des données JSON en front
+            $response = new JsonResponse();
+            $response->setStatusCode(200);
+	    //ajout de données éventuelles
+            $response->setData(array(
+                'successMessage' => "Votre message a bien été envoyé"));
+            return $response;
+        } 
     }
 
 }
