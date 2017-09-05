@@ -1,63 +1,69 @@
-<div id="header">
-        {% block stylesheets %}
+<div id="header" style="height: 74px;">
+    {% block stylesheets %}
         <link href="{{ asset('assets/vendor/css/index.css') }}" type="text/css" rel="stylesheet" />
         <link href="{{ asset('assets/vendor/css/card.css') }}" type="text/css" rel="stylesheet" />
-         <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/css/animate.css') }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/css/animate.css') }}"/>
 
         <script type="text/javascript" src="{{ asset('assets/vendor/js/smooth.js') }}"></script>
     {% endblock %}
 
-        <div id="topTitre">
-            <div id='titre' style="width: 100% ;position: absolute;    top: -3px;    margin-top: 17px;">
+    <div id="topTitre" style="background: #8E3557;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-9 col-md-9 col-xs-9 col-sm-9" id='titre' style="  width: 100% ;position: absolute;    top: -3px;    margin-top: 17px;">
             <h2 style="color: white; font-family: 'Concert One', cursive;"> Site de présentation(vitrine) </h2>
-            
-            <a id="cursusButton" href='#carte'>Cursus</a>
-            <a id="actuButton" href='#actu'>Travaux actuels</a>
-            <a id="contactButton" href='#contact'>Contact</a>
-            <a id="cvButton" href='#cv'>CV</a>
-            <a id="recoButton" href='#reco'>Recommandation</a>
-            </div>
+            <ul style="float: right;" class="col-lg-3 col-md-3 col-xs-3 col-sm-3">
+                <li><a id="cursusButton" href='#carte'>Cursus</a></li>
+
+                <li><a id="contactButton" href='#contact'>Contact</a></li>
+                <li><a id="cvButton" href='#cv'>CV</a></li>
+            </ul>
         </div>
 
+
+
     </div>
-    
-    <style>
-        
-        
-        #contactButton{
+
+
+
+
+
+</div>
+
+<style>
+
+
+    #contactButton{
         top: -42px;
-    position: relative;
-    float: right;
-    left: -15px;
-    color: white;
-}
+        position: relative;
+        float: right;
+        padding: 0px 10px;
+        color: white;
+    }
 
-#contactButton:hover{
-    text-decoration: underline;
-}
+    #contactButton:hover{
+        text-decoration: underline;
+    }
 
-#cursusButton:hover{
-    text-decoration: underline;
-}
-#cvButton:hover{
-    text-decoration: underline;
-}
-#cursusButton{
-    top: -42px;
-    position: relative;
-    float: right;
-    left: -289px;
-    color: white;
-}
+    #cursusButton:hover{
+        text-decoration: underline;
+    }
+    #cvButton:hover{
+        text-decoration: underline;
+    }
+    #cursusButton{
+        top: -42px;
+        position: relative;
+        float: right;
+        padding: 0px 10px;
+        color: white;
+    }
 
-#cvButton{
+    #cvButton{
 
         top: -42px;
-    position: relative;
-    float: right;
-    left: -87px;
-    color: white;
-}
+        position: relative;
+        float: right;
+        padding: 0px 10px;
+        color: white;
+    }
 
-    </style>
-    
+</style>

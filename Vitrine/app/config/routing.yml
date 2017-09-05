@@ -1,25 +1,30 @@
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
-    
+
 platform_accueil:
     path:      /accueil
-    defaults:  { _controller: AppBundle:Default:index }    
+    defaults:  { _controller: AppBundle:Default:index }
+
+
+ajax_contact:
+    path:      /ajax
+    defaults:  { _controller: AppBundle:Default:ajax }
 
 
 platform_decouvrir:
     path:      /decouvrir
     defaults:  { _controller: AppBundle:Default:decouvrir }
 
-    
+
 fos_user:
-    resource: "@FOSUserBundle/Resources/config/routing/all.xml"    
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
 
 
 easy_admin_bundle:
     resource: "@EasyAdminBundle/Controller/"
     type:     annotation
-    prefix:   /admin    
-    
-    
+    prefix:   /admin
+
+

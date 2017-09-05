@@ -14,6 +14,7 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Session\Flash\FlashBag;
 use AppBundle\Entity\Contact;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class DefaultController extends Controller
 {
@@ -25,7 +26,7 @@ class DefaultController extends Controller
     {
         $contact = new Contact;
 
-        # Add form fields
+# Add form fields
         $form = $this->createFormBuilder($contact)
                 ->add('name', TextType::class, array('label' => 'Email', 'attr' => array('class' => 'form-control', 'style' => 'margin-bottom:15px')))
                 ->add('email', TextType::class, array('label' => 'Nom', 'attr' => array('class' => 'form-control', 'style' => 'margin-bottom:15px')))
@@ -34,56 +35,70 @@ class DefaultController extends Controller
                 ->add('Save', SubmitType::class, array('label' => 'Valider', 'attr' => array('class' => 'btn btn-primary', 'style' => 'margin-top:15px')))
                 ->getForm();
 
-        # Handle form response
-        $form->handleRequest($request);
+# Handle form response
+        /*  $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid())
-        {
-            $name = $form['name']->getData();
-            $email = $form['email']->getData();
-            $subject = $form['subject']->getData();
-            $message = $form['message']->getData();
+          if ($form->isSubmitted() && $form->isValid())
+          {
+          $name = $form['name']->getData();
+          $email = $form['email']->getData();
+          $subject = $form['subject']->getData();
+          $message = $form['message']->getData();
 
-            // ... perform some action, such as saving the task to the database
-            // for example, if Task is a Doctrine entity, save it!
-            $contact->setName($name);
-            $contact->setEmail($email);
-            $contact->setSubject($subject);
-            $contact->setMessage($message);
+          // ... perform some action, such as saving the task to the database
+          // for example, if Task is a Doctrine entity, save it!
+          $contact->setName($name);
+          $contact->setEmail($email);
+          $contact->setSubject($subject);
+          $contact->setMessage($message);
 
-            $sn = $this->getDoctrine()->getManager();
-            $sn->persist($contact);
-            $sn->flush();
-        }
+          $sn = $this->getDoctrine()->getManager();
+          $sn->persist($contact);
+          $sn->flush();
+          }
+         */
 
-
-        // replace this example code with whatever you need
+// replace this example code with whatever you need
         return $this->render('default/index.html.twig', array(
                     'base_dir' => realpath($this->container->getParameter('kernel.root_dir') . '/..') . DIRECTORY_SEPARATOR,
                     'form' => $form->createView()
         ));
     }
 
-public function ajaxFormAction(Request $request) {
+    /**
+     * @Route("/ajax", name="ajax")
+     */
+    public function ajaxAction(Request $request)
+    {
 
-        $formService = $this->getFormService();
-        //création du formulaire
-        $myFormObject = new Contact();
-        $myEntityForm   = $this->createForm(new Contact(), $myFormObject);
-        $myEntityForm->handleRequest($request);
 
-        if ($myEntityForm->isValid()) {
-	   //do your stuff ...
-           $username = $formService->$form["form_name"]->getData();
+        $contact = new Contact;
+        $name = $request->request->get('name');
+        $email = $request->request->get('email');
+        $subject = $request->request->get('object');
+        $message = $request->request->get('msg');
 
-            //envoi des données JSON en front
-            $response = new JsonResponse();
-            $response->setStatusCode(200);
-	    //ajout de données éventuelles
-            $response->setData(array(
-                'successMessage' => "Votre message a bien été envoyé"));
-            return $response;
-        } 
+// ... perform some action, such as saving the task to the database
+// for example, if Task is a Doctrine entity, save it!
+
+
+        $contact->setName($name);
+        $contact->setEmail($email);
+        $contact->setSubject($subject);
+        $contact->setMessage($message);
+
+        $sn = $this->getDoctrine()->getManager();
+        $sn->persist($contact);
+        $sn->flush();
+        $response = new JsonResponse();
+        $response->setStatusCode(200);
+//ajout de données éventuelles
+        $response->setData(array(
+            'success' => "Votre message a bien été envoyé"));
+        return $response;
+
+
+//envoi des données JSON en front
     }
 
 }
